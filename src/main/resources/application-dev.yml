@@ -1,0 +1,78 @@
+aws:
+  service:
+    s3:
+      accessKeyId:
+      secretAccessKey:
+server:
+  port:
+spring:
+  datasource:
+    url:
+    username:
+    password:
+  rabbitmq:
+    password:
+    host:
+    port:
+    username:
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id:
+            client-secret:
+          google:
+            redirect-uri:
+            client-name:
+            client-id:
+            client-secret:
+            scope:
+    user:
+      password:
+      name:
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true
+        jdbc:
+          batch_size: 100
+        cache:
+          use_second_level_cache: false
+        format_sql: true
+    hibernate:
+      ddl-auto:
+    show-sql: true
+    open-in-view: true
+  main:
+    allow-bean-definition-overriding: 'true'
+  #  kafka:
+  #    consumer:
+  #      auto-offset-reset: earliest
+  #      properties:
+  #        allow.auto.create.topics: false
+  #    bootstrap-servers:
+  #    admin:
+  #      client-id:
+  #  sql:
+  #    init:
+  #      mode: always
+config:
+  redis:
+    host:
+    port:
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-idle: 8
+
+springdoc:
+  swagger-ui:
+    path:
+rabbitmq:
+  routingkey:
+  queue:
+  exchange:
+    direct:
